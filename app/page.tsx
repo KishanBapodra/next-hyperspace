@@ -16,7 +16,7 @@ export default function Home() {
           className="px-4 py-2 rounded bg-primary hover:bg-accent"
           href="/popup"
         >
-          Popup
+          Open Popup
         </Link>
         <Link
           className="px-4 py-2 rounded bg-primary hover:bg-accent"

@@ -1,16 +1,19 @@
 import Link from "next/link";
+import { IoMdClose } from "react-icons/io";
 
-export default function PopupPage() {
+export default function Popup() {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white p-6 rounded shadow-lg">
-        <Link href="/">
-          <button className="mb-4 px-4 py-2 bg-red-500 text-white rounded">
-            Close
-          </button>
-        </Link>
-        <h2 className="text-xl mb-2">Popup Content</h2>
-        <p>This is the popup content.</p>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ">
+      <div className="bg-secondary p-6 rounded shadow-lg flex flex-col gap-5">
+        <div className="flex justify-between">
+          <h2 className="text-xl mb-2">Hello, Popup here</h2>
+          <Link href="/">
+            <button className="p-2 bg-primary text-text rounded hover:bg-accent">
+              <IoMdClose />
+            </button>
+          </Link>
+        </div>
+        <p>Close me to return to homepage</p>
       </div>
     </div>
   );

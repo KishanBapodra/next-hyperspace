@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hype App | Popup & Some WebGL",
-  description: "A simple popup with some animations and bit of WebGL",
+  description: "A simple popup and a bit of WebGL",
   icons: {
     icon: "/vr.png",
   },
