@@ -3,7 +3,7 @@ import { IoMdClose } from "react-icons/io";
 
 export default function Popup() {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ">
+    <dialog className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 overflow-y-auto h-full w-full ">
       <div className="bg-secondary p-6 rounded shadow-lg flex flex-col gap-5">
         <div className="flex justify-between gap-10">
           <h2 className="text-xl flex items-center">Hello, Popup here</h2>
@@ -15,6 +15,6 @@ export default function Popup() {
         </div>
         <p className="text-center">Close me to return back</p>
       </div>
-    </div>
+    </dialog>
   );
 }
