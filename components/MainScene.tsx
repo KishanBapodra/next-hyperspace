@@ -253,7 +253,7 @@ export default function MainScene() {
         gl.shadowMap.type = THREE.PCFSoftShadowMap;
       }}
     >
-      <ambientLight intensity={1} />
+      <ambientLight intensity={0.25} />
       <Scene />
     </Canvas>
   );

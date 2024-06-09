@@ -28,7 +28,7 @@ export default function RootLayout({
               className="text-3xl py-2 px-3
              font-bold text-text rounded-md"
             >
-              HyperSpace
+              HyperSpace Assessment
             </Link>
             <Link
               href={"/"}
