@@ -14,8 +14,13 @@ export default function Model() {
     actions["move"].play();
   }, [actions]);
 
+  const handleClick = () => {
+    //@ts-ignore
+    actions["move"].paused = !actions["move"].paused;
+  };
+
   return (
-    <group rotation-y={-Math.PI / 4} ref={group}>
+    <group onClick={handleClick} rotation-y={-Math.PI / 4} ref={group}>
       <primitive object={scene} />
     </group>
   );
