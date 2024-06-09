@@ -4,7 +4,6 @@ import {
   PerspectiveCamera,
   useProgress,
   Html,
-  ScrollControls,
   OrbitControls,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -43,7 +42,7 @@ function Rover() {
 
 export default function Scene() {
   return (
-    <div className="w-4/5 h-1/2 sm:w-[512px] sm:h-[512px]">
+    <div className="w-4/5 h-1/3 sm:w-[512px] sm:h-[512px]">
       <Canvas>
         <PerspectiveCamera makeDefault position={[0.25, 0, 5]} />
         <OrbitControls makeDefault />

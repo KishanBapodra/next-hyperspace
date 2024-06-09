@@ -1,11 +1,8 @@
 "use client";
 
-import { useAnimations, useGLTF, useScroll } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { useAnimations, useGLTF } from "@react-three/drei";
 import { useRef, useEffect } from "react";
 import { Group } from "three";
-
-useGLTF.preload("/ufo_vehicle.glb");
 
 export default function Model() {
   const group = useRef<Group>(null);
@@ -18,8 +15,10 @@ export default function Model() {
   }, [actions]);
 
   return (
-    <group rotation={[0, -Math.PI / 4, 0]} ref={group}>
+    <group rotation-y={-Math.PI / 4} ref={group}>
       <primitive object={scene} />
     </group>
   );
 }
+
+useGLTF.preload("/ufo_vehicle.glb");

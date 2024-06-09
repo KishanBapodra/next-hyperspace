@@ -19,7 +19,7 @@ export default function Home() {
           Scene
         </Link>
         <Link
-          className="px-4 py-2 rounded bg-primary hover:bg-accent"
+          className="px-4 py-2 rounded text-nowrap bg-primary hover:bg-accent"
           href="/popup"
         >
           Popup page
