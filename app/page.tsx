@@ -11,7 +11,7 @@ export default function Home() {
         height={200}
         className="rounded-full"
       />
-      <div className="flex w-3/5 gap-3 max-w-64 text-center text-text justify-between items-center text-lg font-semibold">
+      <div className="flex px-4 sm:px-0 w-full sm:w-4/5 gap-3 max-w-96 text-center text-text justify-between items-center text-lg font-semibold">
         <Link
           className="px-4 py-2 rounded bg-primary hover:bg-accent"
           href="/scene"
@@ -23,6 +23,12 @@ export default function Home() {
           href="/popup"
         >
           Popup page
+        </Link>
+        <Link
+          className="px-4 py-2 rounded text-nowrap bg-primary hover:bg-accent"
+          href="/spooky"
+        >
+          Spooky
         </Link>
       </div>
     </div>
