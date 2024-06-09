@@ -5,6 +5,7 @@ import {
   useProgress,
   Html,
   ScrollControls,
+  OrbitControls,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Model from "./models/Model";
@@ -42,17 +43,15 @@ function Rover() {
 
 export default function Scene() {
   return (
-    <Canvas
-      style={{
-        width: "512px",
-        height: "512px",
-      }}
-    >
-      <PerspectiveCamera makeDefault position={[0.75, 0, 5]} />
-      <directionalLight position={[0, 3, 2]} intensity={3} />
-      <Suspense fallback={<Loader />}>
-        <Rover />
-      </Suspense>
-    </Canvas>
+    <div className="w-4/5 h-1/2 sm:w-[512px] sm:h-[512px]">
+      <Canvas>
+        <PerspectiveCamera makeDefault position={[0.25, 0, 5]} />
+        <OrbitControls makeDefault />
+        <directionalLight position={[0, 3, 2]} intensity={3} />
+        <Suspense fallback={<Loader />}>
+          <Rover />
+        </Suspense>
+      </Canvas>
+    </div>
   );
 }
