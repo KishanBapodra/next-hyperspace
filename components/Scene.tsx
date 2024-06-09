@@ -9,6 +9,8 @@ import {
 import { Canvas } from "@react-three/fiber";
 import Model from "./models/Model";
 import { Suspense } from "react";
+import { motion } from "framer-motion-3d";
+import { AnimatePresence } from "framer-motion";
 
 function Loader() {
   const { active, progress } = useProgress();
@@ -21,6 +23,23 @@ function Loader() {
     </Html>
   );
 }
+
+function Rover() {
+  return (
+    <AnimatePresence>
+      <motion.group
+        key={"rover"}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        exit={{ scale: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Model />
+      </motion.group>
+    </AnimatePresence>
+  );
+}
+
 export default function Scene() {
   return (
     <Canvas
@@ -29,12 +48,10 @@ export default function Scene() {
         height: "512px",
       }}
     >
-      <PerspectiveCamera makeDefault position={[0, 1, 5]} />
+      <PerspectiveCamera makeDefault position={[0.75, 0, 5]} />
       <directionalLight position={[0, 3, 2]} intensity={3} />
       <Suspense fallback={<Loader />}>
-        <ScrollControls damping={0.1} pages={3}>
-          <Model />
-        </ScrollControls>
+        <Rover />
       </Suspense>
     </Canvas>
   );

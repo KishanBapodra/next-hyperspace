@@ -5,33 +5,20 @@ import { useFrame } from "@react-three/fiber";
 import { useRef, useEffect } from "react";
 import { Group } from "three";
 
-useGLTF.preload("/asus_tuf_dash_f15_laptop.glb");
+useGLTF.preload("/ufo_vehicle.glb");
 
 export default function Model() {
   const group = useRef<Group>(null);
-  const { nodes, materials, animations, scene } = useGLTF(
-    "/asus_tuf_dash_f15_laptop.glb"
-  );
-  const { actions, clips } = useAnimations(animations, scene);
-  const scroll = useScroll();
+  const { animations, scene } = useGLTF("/ufo_vehicle.glb");
+  const { actions } = useAnimations(animations, scene);
 
   useEffect(() => {
     //@ts-ignore
-    actions["Armature|ArmatureAction"].play().paused = true;
+    actions["move"].play();
   }, [actions]);
 
-  useFrame(
-    () =>
-      //@ts-ignore
-      (actions["Armature|ArmatureAction"].time =
-        //@ts-ignore
-        (actions["Armature|ArmatureAction"].getClip().duration *
-          scroll.offset) /
-        3)
-  );
-
   return (
-    <group rotation={[0, -Math.PI / 2, 0]} scale={7.5} ref={group}>
+    <group rotation={[0, -Math.PI / 4, 0]} ref={group}>
       <primitive object={scene} />
     </group>
   );
