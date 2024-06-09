@@ -32,7 +32,7 @@ export default function RootLayout({
             </Link>
             <Link
               href={"/"}
-              className="text-lg px-2
+              className="text-lg py-2 px-3
              bg-secondary hover:bg-accent font-bold rounded-md h-2/3"
             >
               Home
