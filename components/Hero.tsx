@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <div className="mt-10 p-4 sm:p-0 flex justify-center items-center gap-3 sm:h-auto w-screen sm:w-auto">
-      <div className="text-center text-text lg:text-start flex flex-col gap-2">
+      <div className="text-center text-text sm:text-start flex flex-col gap-2">
         <div className="text-3xl sm:text-5xl font-semibold">
           {headingText.map((el, i) => (
             <motion.span

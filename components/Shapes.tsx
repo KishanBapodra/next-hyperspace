@@ -39,8 +39,8 @@ export default function Shapes() {
     <group scale={1.5} ref={groupRef} onClick={() => setIsJumping(true)}>
       <mesh
         name="face"
-        onPointerOver={(event) => setHover(true)}
-        onPointerOut={(event) => setHover(false)}
+        onPointerOver={() => setHover(true)}
+        onPointerOut={() => setHover(false)}
         position={[0, 1, 0]}
       >
         <boxGeometry args={[0.5, 0.5, 0.5]} />
@@ -62,8 +62,8 @@ export default function Shapes() {
       <mesh
         name="torso"
         position={[0, -0.08, 0]}
-        onPointerOver={(event) => setHover(true)}
-        onPointerOut={(event) => setHover(false)}
+        onPointerOver={() => setHover(true)}
+        onPointerOut={() => setHover(false)}
       >
         <boxGeometry args={[1, 1.2, 0.35]} />
         <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />

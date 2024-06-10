@@ -13,7 +13,7 @@ import { motion } from "framer-motion-3d";
 import { AnimatePresence } from "framer-motion";
 
 function Loader() {
-  const { active, progress } = useProgress();
+  const { progress } = useProgress();
 
   return (
     <Html center>
