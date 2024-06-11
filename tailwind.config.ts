@@ -20,7 +20,8 @@ const config: Config = {
         text: "#d0d0d0",
       },
       animation: {
-        scale: "scale 0.25s ease-in-out forwards",
+        scale: "scale 0.25s linear forwards",
+        lift: "lift 0.25s linear forwards",
       },
       keyframes: {
         scale: {
@@ -28,7 +29,15 @@ const config: Config = {
             transform: "scale(1)",
           },
           "100%": {
-            transform: "scale(1.15)",
+            transform: "scale(1.06)",
+          },
+        },
+        lift: {
+          "0%": {
+            transform: "translateY(0px)",
+          },
+          "100%": {
+            transform: "translateY(-2.5px)",
           },
         },
       },
