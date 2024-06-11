@@ -19,6 +19,19 @@ const config: Config = {
         accent: "#0094b8",
         text: "#d0d0d0",
       },
+      animation: {
+        scale: "scale 0.25s ease-in-out forwards",
+      },
+      keyframes: {
+        scale: {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "100%": {
+            transform: "scale(1.15)",
+          },
+        },
+      },
     },
   },
   plugins: [],
