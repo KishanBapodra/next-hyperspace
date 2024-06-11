@@ -9,7 +9,7 @@ export default function Popup() {
           <h2 className="text-xl font-bold flex items-center">
             Hello, Popup here
           </h2>
-          <Link href="/popup">
+          <Link href="/popup?show=n">
             <button className="p-2 bg-primary text-text rounded hover:bg-accent">
               <IoMdClose />
             </button>

@@ -6,13 +6,13 @@ type SearchParamProps = {
 };
 
 export default function Page({ searchParams }: SearchParamProps) {
-  const show = searchParams?.show;
+  const show = searchParams?.show === "y";
 
   return (
     <div className="h-[95vh] flex justify-center items-center">
       <Link
         className="px-4 py-2 rounded text-text bg-primary hover:bg-accent"
-        href="/popup?show=true"
+        href="/popup?show=y"
       >
         Open Popup
       </Link>
